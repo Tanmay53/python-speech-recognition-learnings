@@ -1,8 +1,12 @@
 import wave
 import matplotlib.pyplot as plt
 import numpy as np
+import os.path
 
-file_obj = wave.open("baby-elephant.wav", "rb")
+my_path = os.path.abspath(os.path.dirname(__file__))
+file_path = os.path.join(my_path, "./audio/baby-elephant.wav")
+
+file_obj = wave.open(file_path, "rb")
 
 sample_frequency = file_obj.getframerate()
 n_samples = file_obj.getnframes()

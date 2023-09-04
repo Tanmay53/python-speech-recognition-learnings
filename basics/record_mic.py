@@ -1,5 +1,6 @@
 import pyaudio
 import wave
+import os.path
 
 FRAMES_PER_BUFFER = 3200
 FORMAT = pyaudio.paInt16
@@ -28,7 +29,10 @@ stream.stop_stream()
 stream.close()
 p.terminate()
 
-file_obj = wave.open("recording.wav", "wb")
+my_path = os.path.abspath(os.path.dirname(__file__))
+file_path = os.path.join(my_path, "./audio/recording.wav")
+
+file_obj = wave.open(file_path, "wb")
 
 file_obj.setnchannels(CHANNELS)
 file_obj.setsampwidth(p.get_sample_size(FORMAT))
