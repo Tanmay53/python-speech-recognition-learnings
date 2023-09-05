@@ -1,4 +1,9 @@
 *.wav
 *.mp3
 
-!baby-elephant.wav
+!basics/audio/baby-elephant.wav
+!speech_recognition/audio/recording.wav
+
+.env
+
+speech_recognition/transcript.txt

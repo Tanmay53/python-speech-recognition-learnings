@@ -1,3 +1,6 @@
+# Check Pyaudio installation steps at
+# https://pypi.org/project/PyAudio/
+
 import pyaudio
 import wave
 import os.path
